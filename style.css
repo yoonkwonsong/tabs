@@ -25,17 +25,20 @@ main > h3 {
     font-weight: 500;
     color: rgb(104, 132, 160);
     margin-bottom: 60px;
+    padding: 0 30px;
+    text-align: center;
 }
 
 .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding: 0 50px 60px 50px;
 }
 
 .box > .image {
     height: 350px;
-    width: 600px;
+    max-width: 40rem;
     background-image: url("./hero-bcg.jpeg");
     background-position: center;
     background-size: cover;
@@ -43,10 +46,8 @@ main > h3 {
 }
 
 .box > .tabs {
-    border-radius: 10px;
-    height: 350px;
-    width: 600px;
-    background-color: white;
+    max-width: 40rem;
+    /* background-color: white; */
 }
 
 .box > .tabs > .tabs-top {
@@ -70,9 +71,30 @@ main > h3 {
     cursor: pointer;
 }
 
+.box > .tabs > .tabs-top > .sub-tab.open-tab-top {
+    background-color: white;
+}
+
+.box > .tabs > .tabs-top > .sub-tab:first-of-type {
+    border-radius: 10px 0 0 0;
+}
+
+.box > .tabs > .tabs-top > .sub-tab:last-of-type {
+    border-radius: 0 10px 0 0;
+}
+
 .box > .tabs > .tabs-bottom > .sub-tab-bot {
     padding: 20px 40px 40px 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+    display: none;
 }
+
+.box > .tabs > .tabs-bottom > .sub-tab-bot.open-tab-bottom {
+    display: block;
+}
+
 .box > .tabs > .tabs-bottom > .sub-tab-bot > h2 {
     font-size: 20px;
     text-transform: capitalize;
@@ -84,4 +106,10 @@ main > h3 {
 .box > .tabs > .tabs-bottom > .sub-tab-bot > p {
     line-height: 25px;
     color: rgb(80, 101, 121);
+}
+
+@media (max-width: 1000px) {
+    .box {
+        grid-template-columns: 1fr;
+    }
 }
