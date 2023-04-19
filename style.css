@@ -2,7 +2,86 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid rgb(255, 170, 170); */
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+
+main > h1 {
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: rgb(59, 59, 59);
+    margin: 80px 0 20px;
+}
+
+main > h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(104, 132, 160);
+    margin-bottom: 60px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.box > .image {
+    height: 350px;
+    width: 600px;
+    background-image: url("./hero-bcg.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.box > .tabs {
+    border-radius: 10px;
+    height: 350px;
+    width: 600px;
+    background-color: white;
+}
+
+.box > .tabs > .tabs-top {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.box > .tabs > .tabs-top > .sub-tab {
+    background-color: rgb(191, 210, 228);
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.box > .tabs > .tabs-bottom > .sub-tab-bot {
+    padding: 20px 40px 40px 20px;
+}
+.box > .tabs > .tabs-bottom > .sub-tab-bot > h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: rgb(73, 73, 73);
+}
+
+.box > .tabs > .tabs-bottom > .sub-tab-bot > p {
+    line-height: 25px;
+    color: rgb(80, 101, 121);
 }
