@@ -5,11 +5,15 @@ titles.forEach((title) =>
     title.addEventListener("click", (e) => {
         titles.forEach((t) => {
             t.classList.remove("open-tab-top")
+
+            t.textContent == e.target.textContent &&
+                t.classList.add("open-tab-top")
         })
         text.forEach((t) => {
             t.classList.remove("open-tab-bottom")
-        })
 
-        e.target.classList.add("open-tab-top")
+            t.classList.contains(e.target.textContent) &&
+                t.classList.add("open-tab-bottom")
+        })
     })
 )
